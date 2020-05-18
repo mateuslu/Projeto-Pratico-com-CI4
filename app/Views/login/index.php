@@ -3,7 +3,7 @@
 <html>
 	<head>
     <meta charset="utf-8" />
-		<title>Login</title>
+		<title> <?php echo $titulo ?> </title>
 
 		<?php echo view('template/header') ?>
 
@@ -24,6 +24,9 @@
 					<h1 class="display-4 text-center">Login</h1><br>
 				</div>
 			  </div>
+
+			  <?php my_custom_erros() ?>
+
 
 			  <form action="index.html" method="POST">
 			

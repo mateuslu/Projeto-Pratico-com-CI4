@@ -3,7 +3,7 @@
 <html>
 	<head>
     <meta charset="utf-8" />
-		<title>Cadastre-se!</title>
+		<title> <?php echo $titulo ?> </title>
 
     <?php echo view('template/header') ?>
 
@@ -25,7 +25,9 @@
 				</div>
 			  </div>
 
-			  <form action="" method="POST">
+			  <?php my_custom_erros() ?>
+
+			  <form action="cadastroAcao" method="POST">
 			
 				<div class="form-row">
                   <div class="col-12 mb-2">

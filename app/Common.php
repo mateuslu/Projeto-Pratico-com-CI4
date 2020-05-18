@@ -13,3 +13,20 @@
  *
  * @link: https://codeigniter4.github.io/CodeIgniter4/
  */
+
+ function my_custom_erros(){
+
+    if(\Config\services::session()->getFlashdata('sucesso')){
+        echo '<div class="alert alert-success" role="alert">';
+        echo \Config\services::session()->getFlashdata('sucesso');
+        echo '</div>';
+    }
+
+    if(\Config\services::session()->getFlashdata('erro')){
+        echo '<div class="alert alert-danger" role="alert">';
+        echo \Config\services::session()->getFlashdata('erro');
+        echo '</div>';
+    }
+
+    echo \Config\Services::validation()->listErrors();
+ }
